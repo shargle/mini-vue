@@ -2,15 +2,16 @@ import { hasChanged, isObject } from "../shared/index";
 import { isTracking, trackEffects, triggerEffects } from "./effect";
 import { reactive } from "./reactive";
 
-class RefImpl {index
+class RefImpl {
     private _value: any;
     public dep;
     private _rawValue: any;
     public __v_isRef = true;
     constructor(value) {
-        this._rawValue = value
-        this._value = convert(value)
-        this.dep = new Set()
+
+        this._rawValue = value;
+        this._value = convert(value);
+        this.dep = new Set();
     }
     get value() {
         trackRefValue(this)
