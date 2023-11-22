@@ -14,7 +14,8 @@ export default{
     render(){
         return h("div",{tid:1},[
             h("p",{},"主页"),
-            h(TextToArray)
+           // h(TextToArray)
+           h(ArrayToArray)
         ])
     }
 }
