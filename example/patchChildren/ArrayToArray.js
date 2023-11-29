@@ -76,7 +76,7 @@ import { ref, h } from "../../lib/guide-mini-vue.esm.js";
 // (b c)
 // i = 0, e1 = 0, e2 = -1
 
-const prevChildren = [
+/* const prevChildren = [
   h("p", { key: "A" }, "A"),
   h("p", { key: "B" }, "B"),
   h("p", { key: "C", id: "c-prev" }, "C"),
@@ -92,6 +92,30 @@ const nextChildren = [
   h("p", { key: "C", id:"c-next" }, "C"),
   h("p", { key: "F" }, "F"),
   h("p", { key: "G" }, "G"),
+]; */
+
+const prevChildren = [
+  h("p", { key: "A" }, "A"),
+  h("p", {}, "C"),
+  h("p", { key: "B" }, "B"),
+  h("p", { key: "C" }, "C"),
+  h("p", { key: "D" }, "D"),
+  h("p", { key: "E" }, "E"),
+  h("p", { key: "Z" }, "Z"),
+  h("p", { key: "F" }, "F"),
+  h("p", { key: "G" }, "G"),
+];
+
+const nextChildren = [
+  h("p", { key: "A" }, "A"),
+  h("p", {}, "C"),
+  h("p", { key: "B" }, "B"),
+  h("p", { key: "D" }, "D"),
+  h("p", { key: "C" }, "C"),
+  h("p", { key: "Y" }, "Y"),
+  h("p", { key: "E" }, "E"),
+  h("p", { key: "F" }, "F"),
+  h("p", { key: "G" }, "G"),
 ];
 // 5. 对比中间的部分
 //    1. 创建新的 （在老的里面不存在，新的里面存在）
@@ -102,7 +126,7 @@ const nextChildren = [
 export default {
   name: "ArrayToArray",
   setup() {
-    const isChange = ref(false);
+    const isChange = ref(true);
     window.isChange = isChange;
 
     return {
