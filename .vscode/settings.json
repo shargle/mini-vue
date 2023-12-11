@@ -1,4 +1,4 @@
 {
     "git.openDiffOnClick": true,
-    "editor.inlineSuggest.showToolbar": "always"
+    "editor.inlineSuggest.showToolbar": "onHover"
 }
